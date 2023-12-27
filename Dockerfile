@@ -1,4 +1,2 @@
-FROM ubuntu:latest
-LABEL authors="soobinjeon"
-
-ENTRYPOINT ["top", "-b"]
+FROM nginx
+COPY nginx.conf /etc/nginx/nginx.conf
