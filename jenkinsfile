@@ -21,10 +21,10 @@ node {
         }
     }
 
-    //stage('Kubernetes deploy') {
-    //    sh "kubectl delete -f /services/dcucode/oj-frontend_only_con.yaml -n dcucode"
-    //    sh "kubectl apply -f /services/dcucode/oj-frontend_only_con.yaml -n dcucode"
-    //}
+    stage('Kubernetes deploy') {
+        sh "kubectl delete -f /services/cdci/fileserver_con.yaml -n cdci"
+        sh "kubectl apply -f /services/cdci/fileserver_con.yaml -n cdci"
+    }
 
     stage('Complete') {
         sh "echo 'The end'"
