@@ -26,8 +26,8 @@ WORKDIR /static_files
 RUN chown $USER.$USER /static_files
  
 #set password
-RUN echo 'root:snslab' |chpasswd
-RUN echo $USER':snslab' |chpasswd
+RUN echo 'root:wwwsnslab' |chpasswd
+RUN echo $USER':wwwsnslab' |chpasswd
 
 EXPOSE 22
 
